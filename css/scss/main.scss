@@ -18,10 +18,11 @@ img {
     max-width: 900px;
     padding-top: 3rem;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sleeve {
-    max-height: 300px;
     margin-bottom: 12px;
     margin-left: 12px;
     float: left;

@@ -14,13 +14,20 @@ img {
 /* layout
 ------------------------------------------------------------------------------*/
 #site-wrapper {
+<<<<<<< HEAD
   width: 98%;
+=======
+  width: 100%;
+>>>>>>> 96089c8ed2423099bcf71cddd8ee2e5e707266c7
   max-width: 900px;
   padding-top: 3rem;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sleeve {
+<<<<<<< HEAD
   max-height: 300px;
   margin-bottom: 12px;
   margin-left: 12px;
@@ -43,4 +50,12 @@ img {
   }
 }
 
+=======
+  margin-bottom: 1rem;
+}
+
+/* media queries
+------------------------------------------------------------------------------*/
+
+>>>>>>> 96089c8ed2423099bcf71cddd8ee2e5e707266c7
 /*# sourceMappingURL=main.css.map */
