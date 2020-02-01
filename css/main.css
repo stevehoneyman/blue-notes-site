@@ -14,19 +14,33 @@ img {
 /* layout
 ------------------------------------------------------------------------------*/
 #site-wrapper {
-  width: 100%;
+  width: 98%;
   max-width: 900px;
   padding-top: 3rem;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .sleeve {
-  margin-bottom: 1rem;
+  max-height: 300px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  float: left;
 }
-
-/* media queries
-------------------------------------------------------------------------------*/
+@media (min-width: 301px) {
+  .sleeve {
+    width: calc(50% - 6px);
+  }
+  .sleeve:nth-of-type(2n+1) {
+    margin-left: 0;
+  }
+}
+@media (min-width: 601px) {
+  .sleeve {
+    width: 30%;
+  }
+  .sleeve:nth-of-type(2n+1) {
+    margin-left: 12px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
