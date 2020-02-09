@@ -15,7 +15,7 @@ img {
 ------------------------------------------------------------------------------*/
 #site-wrapper {
     width: 98%;
-    max-width: 900px;
+    max-width: 960px;
     padding-top: 1rem;
     margin: 0 auto;
 
@@ -33,7 +33,7 @@ img {
                 grid-template-columns: repeat(3, 1fr);
             }
 
-            @media (min-width: 960px) {
+            @media (min-width: 901px) {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
@@ -67,7 +67,7 @@ img {
                     }
                 }
 
-                @media (min-width: 960px) {
+                @media (min-width: 901px) {
                     width: calc(25% - 12px);
 
                     &:nth-of-type(2n+1) {
