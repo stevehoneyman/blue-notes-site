@@ -19,43 +19,66 @@ img {
   padding-top: 1rem;
   margin: 0 auto;
 }
-
-.sleeve {
-  margin-bottom: 12px;
-  margin-left: 12px;
-  float: left;
-}
-@media (min-width: 301px) {
-  .sleeve {
-    width: calc(50% - 6px);
+@supports (display: grid) {
+  #site-wrapper main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .75rem;
   }
-  .sleeve:nth-of-type(2n+1) {
-    margin-left: 0;
+  @media (min-width: 300px) {
+    #site-wrapper main {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
-@media (min-width: 601px) {
-  .sleeve {
-    width: calc(33.33% - 8px);
+  @media (min-width: 601px) {
+    #site-wrapper main {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-  .sleeve:nth-of-type(2n+1) {
-    margin-left: 12px;
-  }
-  .sleeve:nth-of-type(3n+1) {
-    margin-left: 0;
+  @media (min-width: 960px) {
+    #site-wrapper main {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
-@media (min-width: 901px) {
-  .sleeve {
-    width: calc(25% - 12px);
-  }
-  .sleeve:nth-of-type(2n+1) {
+@supports not (display: grid) {
+  #site-wrapper main .sleeve {
+    margin-bottom: 12px;
     margin-left: 12px;
+    float: left;
   }
-  .sleeve:nth-of-type(3n+1) {
-    margin-left: 12px;
+  @media (min-width: 301px) {
+    #site-wrapper main .sleeve {
+      width: calc(50% - 6px);
+    }
+    #site-wrapper main .sleeve:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
   }
-  .sleeve:nth-of-type(4n+1) {
-    margin-left: 0;
+  @media (min-width: 601px) {
+    #site-wrapper main .sleeve {
+      width: calc(33.33% - 8px);
+    }
+    #site-wrapper main .sleeve:nth-of-type(2n+1) {
+      margin-left: 12px;
+    }
+    #site-wrapper main .sleeve:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 960px) {
+    #site-wrapper main .sleeve {
+      width: calc(25% - 12px);
+    }
+    #site-wrapper main .sleeve:nth-of-type(2n+1) {
+      margin-left: 12px;
+    }
+    #site-wrapper main .sleeve:nth-of-type(3n+1) {
+      margin-left: 12px;
+    }
+    #site-wrapper main .sleeve:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
   }
 }
 

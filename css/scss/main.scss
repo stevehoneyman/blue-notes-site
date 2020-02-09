@@ -18,46 +18,71 @@ img {
     max-width: 900px;
     padding-top: 1rem;
     margin: 0 auto;
-}
 
-.sleeve {
-    margin-bottom: 12px;
-    margin-left: 12px;
-    float: left;
+    @supports (display: grid) {
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: .75rem;
 
-    @media (min-width: 301px) {
-        width: calc(50% - 6px);
+            @media (min-width: 300px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-        &:nth-of-type(2n+1) {
-            margin-left: 0;
+            @media (min-width: 601px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media (min-width: 960px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     }
 
-    @media (min-width: 601px) {
-        width: calc(33.33% - 8px);
+    // grid fallback for non-supporting browsers
+    @supports not (display: grid) {
+        main {
+            .sleeve {
+                margin-bottom: 12px;
+                margin-left: 12px;
+                float: left;
 
-        &:nth-of-type(2n+1) {
-            margin-left: 12px;
+                @media (min-width: 301px) {
+                    width: calc(50% - 6px);
+
+                    &:nth-of-type(2n+1) {
+                        margin-left: 0;
+                    }
+                }
+
+                @media (min-width: 601px) {
+                    width: calc(33.33% - 8px);
+
+                    &:nth-of-type(2n+1) {
+                        margin-left: 12px;
+                    }
+
+                    &:nth-of-type(3n+1) {
+                        margin-left: 0;
+                    }
+                }
+
+                @media (min-width: 960px) {
+                    width: calc(25% - 12px);
+
+                    &:nth-of-type(2n+1) {
+                        margin-left: 12px;
+                    }
+
+                    &:nth-of-type(3n+1) {
+                        margin-left: 12px;
+                    }
+
+                    &:nth-of-type(4n+1) {
+                        margin-left: 0;
+                    }
+                }
+            }
         }
-
-        &:nth-of-type(3n+1) {
-            margin-left: 0;
-        }
-    }
-
-    @media (min-width: 901px) {
-        width: calc(25% - 12px);
-
-        &:nth-of-type(2n+1) {
-            margin-left: 12px;
-        }
-
-        &:nth-of-type(3n+1) {
-            margin-left: 12px;
-        }
-
-        &:nth-of-type(4n+1) {
-            margin-left: 0;
-        }
-    }
-}
+    } // end grid fallback
+} // close layout
