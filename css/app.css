@@ -37,6 +37,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 ol, ul, li {
@@ -50,6 +51,25 @@ ol, ul, li {
   max-width: 960px;
   padding-top: 1rem;
   margin: 0 auto;
+}
+
+figcaption {
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+/* type
+------------------------------------------------------------------------------*/
+h1,
+h2,
+p {
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
 }
 
 /* sleeve grid
