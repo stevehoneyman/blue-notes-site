@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
+/* mixins
+----------------------------------------------------------------------------- */
+/* variables
+----------------------------------------------------------------------------- */
+/*reset
+----------------------------------------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+code,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+/* layout
+------------------------------------------------------------------------------*/
+#site-wrapper {
+  width: 100%;
+  max-width: 960px;
+  padding-top: 1rem;
+  margin: 0 auto;
+}
+
+/* sleeve grid
+------------------------------------------------------------------------------*/
+@supports (display: grid) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .75rem;
+  }
+  @media (min-width: 300px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 601px) {
+    main {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 901px) {
+    main {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@supports not (display: grid) {
+  main .sleeve {
+    margin-bottom: 12px;
+    margin-left: 12px;
+    float: left;
+  }
+  @media (min-width: 301px) {
+    main .sleeve {
+      width: calc(50% - 6px);
+    }
+    main .sleeve:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 601px) {
+    main .sleeve {
+      width: calc(33.33% - 8px);
+    }
+    main .sleeve:nth-of-type(2n+1) {
+      margin-left: 12px;
+    }
+    main .sleeve:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 901px) {
+    main .sleeve {
+      width: calc(25% - 12px);
+    }
+    main .sleeve:nth-of-type(2n+1) {
+      margin-left: 12px;
+    }
+    main .sleeve:nth-of-type(3n+1) {
+      margin-left: 12px;
+    }
+    main .sleeve:nth-of-type(4n+1) {
+      margin-left: 0;
+    }
+  }
+}
