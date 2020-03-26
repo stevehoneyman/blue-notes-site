@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------------*/
 
 @supports (display: grid) {
-	main {
+	.grid-container {
 		display: grid;
 		grid-template-columns: 1fr;
 		//grid-template-columns: repeat(auto-fit, minmax(240px, 1fr ));
@@ -24,7 +24,7 @@
 
 // grid fallback for non-supporting browsers
 @supports not (display: grid) {
-	main {
+	.grid-container {
 		.sleeve {
 			margin-bottom: 12px;
 			margin-left: 12px;

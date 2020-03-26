@@ -55,64 +55,64 @@ ol, ul, li {
 /* sleeve grid
 ------------------------------------------------------------------------------*/
 @supports (display: grid) {
-  main {
+  .grid-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: .75rem;
   }
   @media (min-width: 300px) {
-    main {
+    .grid-container {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   @media (min-width: 601px) {
-    main {
+    .grid-container {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   @media (min-width: 901px) {
-    main {
+    .grid-container {
       grid-template-columns: repeat(4, 1fr);
     }
   }
 }
 
 @supports not (display: grid) {
-  main .sleeve {
+  .grid-container .sleeve {
     margin-bottom: 12px;
     margin-left: 12px;
     float: left;
   }
   @media (min-width: 301px) {
-    main .sleeve {
+    .grid-container .sleeve {
       width: calc(50% - 6px);
     }
-    main .sleeve:nth-of-type(2n+1) {
+    .grid-container .sleeve:nth-of-type(2n+1) {
       margin-left: 0;
     }
   }
   @media (min-width: 601px) {
-    main .sleeve {
+    .grid-container .sleeve {
       width: calc(33.33% - 8px);
     }
-    main .sleeve:nth-of-type(2n+1) {
+    .grid-container .sleeve:nth-of-type(2n+1) {
       margin-left: 12px;
     }
-    main .sleeve:nth-of-type(3n+1) {
+    .grid-container .sleeve:nth-of-type(3n+1) {
       margin-left: 0;
     }
   }
   @media (min-width: 901px) {
-    main .sleeve {
+    .grid-container .sleeve {
       width: calc(25% - 12px);
     }
-    main .sleeve:nth-of-type(2n+1) {
+    .grid-container .sleeve:nth-of-type(2n+1) {
       margin-left: 12px;
     }
-    main .sleeve:nth-of-type(3n+1) {
+    .grid-container .sleeve:nth-of-type(3n+1) {
       margin-left: 12px;
     }
-    main .sleeve:nth-of-type(4n+1) {
+    .grid-container .sleeve:nth-of-type(4n+1) {
       margin-left: 0;
     }
   }
