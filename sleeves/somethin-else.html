@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: Somethin' Else</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>Somethin' Else</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+	&lt;div class="wrapper"&gt;
+		&lt;div class="container"&gt;
+			&lt;section class="type"&gt;
+				&lt;p class="somethin">Somethin'&lt;/p&gt;
+				&lt;p class="else">Else&lt;/p&gt;
+				&lt;p class="cannonball">Cannoball&lt;/p&gt;
+				&lt;p class="adderley">Adderley&lt;/p&gt;
+				&lt;p class="miles">Miles Davis&lt;/p&gt;
+				&lt;p class="hank">Hank Jones&lt;/p&gt;
+				&lt;p class="sam">Sam Jones&lt;/p&gt;
+				&lt;p class="art">Art Blakey&lt;/p&gt;
+				&lt;p class="blue">Blue Note 1595&lt;/p&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+	@font-face {
+	    font-family: 'league gothic';
+	    src: url('../../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
+	         url('../../fonts/leaguegothic-regular-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 1vw;
+	}
+
+	body {
+		background: #ccc;
+	}
+
+	.wrapper {
+	  	max-width: 600px;
+	  	margin: 1rem auto;
+	  	border: 5px solid #fff;
+
+	  	.container {
+			position: relative;
+	  		height: 0;
+	  		padding-bottom: 100%;
+	  		// background: url("../images/worn-sleeve.jpg");
+	  		background-size: cover;
+	  		background-color: #000;
+		
+	  		.type {
+				padding-top: 17.11%;
+				padding-left: 59.21%;
+				font-family: 'league gothic';
+				text-transform: uppercase;
+				opacity: 0.95;
+			}
+		}	
+	}
+
+	p.somethin {
+		color: #fff;
+		font-size: 8.25em;
+		letter-spacing: 0.125em;
+	}
+
+	p.else {
+		color: #fff;
+		font-size: 25em;
+		line-height: 0.75;
+		letter-spacing: 0.005em;
+	}
+
+	p.cannonball {
+		color: #c9ef5f;
+		font-size: 6.15em;
+		line-height: 0.95;
+		letter-spacing: 0.25em;
+	}
+
+	p.adderley {
+		color: #c9ef5f;
+		font-size: 6.15em;
+		line-height: 0.95;
+		letter-spacing: 0.35em;
+	}
+
+	p.miles {
+		color: #63afec;
+		font-size: 6.15em;
+		line-height: 0.95;
+		letter-spacing: 0.18em;
+	}
+
+	p.hank {
+		color: #63afec;
+		font-size: 6.15em;
+		line-height: 0.95;
+		letter-spacing: 0.21em;
+	}
+
+	p.sam {
+		color: #63afec;
+		font-size: 6.15em;
+		line-height: 0.95;
+		letter-spacing: 0.275em;
+	}
+
+	p.art {
+		color: #63afec;
+		font-size: 6.15em;
+		line-height: 0.95;
+		letter-spacing: 0.21em;
+	}
+
+	p.blue {
+		color: #fff;
+		font-size: 5.5vw;
+		line-height: 0.95;
+		letter-spacing: 0.115em;
+	}
+
+	/* ========== MEDIA QUERIES ============= */
+
+	@media (min-width: 600px) {
+
+	p.somethin {
+		font-size: 50px;
+		}
+
+	p.else {
+		font-size: 150px;
+		}
+
+	p.cannonball, 
+	p.adderley, 
+	p.miles, 
+	p.hank, 
+	p.sam, 
+	p.art {
+		font-size: 37px;
+	}
+
+	p.blue {
+		font-size: 33px;
+		}
+	}
+</code>
+</pre>
+<!--====================== END CSS ====================================-->
+
+				
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>

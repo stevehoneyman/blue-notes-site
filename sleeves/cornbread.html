@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: Cornbread</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>Cornbread</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+	&lt;div class="container"&gt;
+
+		&lt;img src="images/cornbread-filtered-2.png" class="sleeve" alt="worn faded red album sleeve"&gt;
+		&lt;img src="images/lee-4.jpg" class="lee" alt="lee morgan holding a trumpet"&gt;
+
+		&lt;h1 aria-label="Cornbread"&gt;
+			&lt;span class="top" aria-hidden="true">Cornbread&lt;/span&gt;
+			&lt;span class="right" aria-hidden="true">Cornbread&lt;/span&gt;
+			&lt;span class="bottom" aria-hidden="true">Cornbread&lt;/span&gt;
+			&lt;span class="left" aria-hidden="true">Cornbread&lt;/span&gt;
+		&lt;/h1&gt;
+
+		&lt;section aria-label="list of band members"&gt;
+			&lt;h2>Lee Morgan&lt;/h2&gt;
+			&lt;ul>
+				&lt;li&gt;/ Jackie McLean&lt;/li&gt;
+				&lt;li&gt;/ Hank Mobley / &lt;/li&gt;
+				&lt;li&gt;Herbie Hancock / &lt;/li&gt;
+				&lt;li&gt;Larry Ridley / &lt;/li&gt;
+				&lt;li&gt;Billy Higgins&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;/section&gt;
+
+		&lt;footer class="logo group" aria-label="blue note logo"&gt;
+			&lt;span class="rectangle"&gt;&lt;/span&gt;
+			&lt;span class="elipse"&gt;&lt;/span&gt;
+			&lt;span class="label"&gt;Blue Note&lt;/span&gt;
+		&lt;/footer&gt;
+
+	&lt;/div&gt;<!-- close container -->
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+	@font-face {
+	font-family: 'Trade Gothic';
+	src: url('fonts/trade-gothic-web/TradeGothicLTStd.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'League Gothic';
+	    src: url('fonts/leaguegothic-regular-webfont.woff2') format('woff2');
+	}
+
+	/* ================== RESET ======================= */
+
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 1vw;
+	}
+
+	body {
+		padding-top: 3rem;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+
+	ul {
+		display: inline;
+		list-style-type: none;
+	}
+
+	.group:after {
+			content: " ";
+			display: table;
+			clear: both;
+	}
+
+	/* ==================== LAYOUT ==================== */
+
+	.container {
+		display: grid;
+		grid-template-columns: 15.9% 12.5% 0.75% 41.66% 1% 12.5% 15.6%;
+		grid-template-rows: 13.16rem 13.33rem 0.15rem 41.66rem 0.75rem 13.33rem 17.5rem;
+
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	section {
+		grid-column:  2 / 7;
+		grid-row:  1 / 2;
+
+		align-self: end;
+		padding-left: 0.5%;
+		margin-bottom: 4px;
+
+		z-index: 30;
+	}
+
+	.lee {
+		grid-column: 4 / 5;
+		grid-row: 4 / 5;
+
+		mix-blend-mode: hard-light;
+		opacity: 0.95;
+		z-index: 10;
+	}
+
+	/* ============ TYPOGRAPHY ================= */
+
+	h1 {
+		grid-column: 2 / 7;
+		grid-row: 2 / 7;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+
+		font-family: league gothic;
+		font-size: 18.325em;
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: .75;
+		letter-spacing: -0.025em;
+		color: #1f1919;
+		mix-blend-mode: normal;
+
+		font-weight: normal;
+		font-style: normal;
+
+		z-index: 20;
+	}
+
+
+	/* ---------- cornbread lettering ------- */
+
+	h1 .top {
+		grid-column: 1 / 5;
+		grid-row: 1 / 1;
+
+		margin-top: 1px;
+		margin-left: -3px;
+		z-index: 100;
+	}
+
+
+	h1 .right {
+		grid-column: 4 / 5;
+		grid-row: 1 / 4;
+
+		writing-mode: vertical-lr;
+		justify-self: right;
+
+		margin-top: -4px;
+	}
+
+	h1 .bottom {
+		grid-column: 5 / 2;
+		grid-row: 6 / 7;
+
+		transform: rotate(180deg);
+		align-self: start;
+		justify-self: end;
+		margin-right: -2px;
+	}
+
+	h1 .left {
+		grid-column: 1 / 2;
+		grid-row: 7 / 2;
+
+		writing-mode: vertical-lr;
+		justify-self: baseline;
+		transform: rotate(180deg);
+
+		margin-bottom: -5px;
+	}
+
+	h2, li {
+		display: inline;
+		font-family: 'Trade Gothic';
+		font-size: 2.8em;
+		text-transform: uppercase;
+		font-weight: 400;
+		line-height: 1;
+		color: #332727;
+	}
+
+	h2 {
+		color: #fff;
+	}
+
+
+	li:last-of-type {
+		letter-spacing: -0.0025em;
+	}
+
+
+	/* ------------ effects ----------- */
+
+	.sleeve {
+		grid-column: 1 / 8;
+		grid-row: 1 / 8;
+		mix-blend-mode: normal;
+		z-index: 5;
+	}
+
+	/* ------------- logo ------------------ */
+
+	footer {
+		grid-column: 6 / 7;
+		grid-row: 7 / 8;
+		margin-top: 11%;
+		padding-right: 0;
+		z-index: 50;
+	}
+
+	.rectangle {
+		position: relative;
+		display: block;
+		margin-right: 1%;
+		width: 100%;
+		height: 24%;
+		border: 0.15em solid #332727;
+		float: right;
+		padding-left: 5%;
+	}
+
+	.rectangle:after {
+		content: 'The Finest in Jazz';
+		position: absolute;
+		bottom: 0;
+		font-size: 1.5em;
+		padding-left: 0;
+		color:  #332727;
+	}
+
+	.elipse {
+		width: 65%;
+		height: 25%;
+		margin-top: 0;
+		margin-right: 96%;
+		border-radius: 24px / 12px;
+		border: 0.15em solid #332727;
+		margin-bottom: 8px;
+		float: right;
+	}
+
+	.elipse:after {
+		content: '';
+		padding: 2%;
+	}
+
+	.label {
+		padding-top: 0;
+		padding-left: 5%;
+		font-family: 'Trade Gothic';
+		text-transform: uppercase;
+		font-size: 2.19em;
+		font-weight: 400;
+		color: #000;
+		float: left;
+		margin-top: -2.25em;
+	}
+
+	/* ------- media queries and locks ----- */
+
+	@media (min-width: 600px) {
+
+			.container {
+				grid-template-rows: 79px 80px 1px 250px 5px 80px 105px;
+			}
+
+			.top,
+			.right,
+			.bottom,
+			.left {
+				font-size: 109.65px;
+				letter-spacing: -2.75px;
+			}
+
+			section h2, li {
+				font-size: 17px;
+			}
+
+			.label {
+				font-size: 13px;
+			}
+
+			.rectangle:after {
+				font-size: 9px;
+			}
+	}
+</code>
+</pre>
+<!--====================== END CSS ====================================-->	
+
+				
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>

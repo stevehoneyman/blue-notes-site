@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: UP</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>UP</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+	&lt;div class="wrapper filter"&gt;
+		&lt;div class="sleeve"&gt;
+			&lt;h1&gt;
+				&lt;span class="title-line-1"&gt;Sunny Side&lt;/span&gt;
+				&lt;span class="title-line-2"&gt;Up&lt;/span&gt;
+			&lt;/h1&gt;
+			&lt;h2&gt;Lou Donaldson&lt;/h2&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;Bill Hardman,&lt;/li&gt;
+				&lt;li&gt;Horace Parlan,&lt;/li&gt;
+				&lt;li&gt;Sam Jones,&lt;/li&gt;
+				&lt;li&gt;Laymon Jackson,&lt;/li&gt;
+				&lt;li&gt;Al Harewood&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;<!-- sleeve closing div -->
+	&lt;/div&gt;<!-- wrapper closing div -->
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+	/* ------------------- fonts -------------------- */
+
+	@font-face {
+		font-family: 'up';
+		src: url('fonts/up/UPRegular.woff2') format('woff2'),
+    	url('fonts/up/UPRegular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}	
+
+
+	@font-face {
+		font-family: 'Trade Gothic';
+	    src: url('fonts/trade-gothic/TradeGothicLTStd-Extended.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/* ------------------ reset --------------------- */
+	
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		--black: rgba(0, 0, 0, 1);
+		--white: rgba(255, 255, 255, .95);
+		--creme: #f7f4ec;
+		--red: rgba(212, 32, 32, 1);
+		--light-grey: #cccccc;
+	}
+
+	html {
+		font-size: 1vw;
+	}
+
+	body {
+		-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		background: var(--light-grey);
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	/* ------------------- layout --------------------- */	
+
+	.wrapper {
+		width: 100%;
+  		max-width: 600px;
+  		margin: 3rem auto 0;
+  	}
+
+	.sleeve {
+		position: relative;
+		height: 0;
+		padding-bottom: 100%; 
+ 		background-image: url('images/worn-sleeve.jpg');
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+
+	/*  	
+		.sleeve:after {
+	  		position: absolute;
+	  		content: '';
+	  		top: 0;
+	  		width: 100%;
+			height: 100%;
+	  		background-image: url('images/worn-sleeve.jpg');
+	  		background-repeat: no-repeat;
+	  		background-size: cover;
+	  		mix-blend-mode: lighten;
+	  		opacity: 0.65;
+	  		z-index: 10;
+	  	}
+	*/
+		.filter {
+  			-webkit-filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
+  			filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
+			opacity: 0.95;
+		}
+	
+
+
+	/* ------------------- type --------------------- */		
+		
+	h1 {
+		display: flex;
+		flex-direction: column;
+		color: var(--white);
+	}
+
+	.title-line-1 {
+		margin-top: -15.5%;
+		margin-bottom: .25rem;
+		margin-left: 9%;	
+		font-size: 2.25em;
+		font-family: 'trade gothic';
+		font-weight: 400;
+		line-height: 1;
+		text-transform: uppercase;
+		order: 2;
+	}
+
+	.title-line-2 {
+		margin-left: -15px;
+		font-family: 'up';
+		font-size: 26em;
+		letter-spacing: -.24em;
+		line-height: 1;
+		color: var(--white);
+		order: 1;
+	}
+
+	h2 {
+		font-family: 'trade gothic';
+		font-size: 4.9em;
+		margin-left: 28%;
+		font-weight: 100;
+		text-transform: uppercase;
+		color: var(--red);
+	}
+
+	ul {
+		margin-left: 10%;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		font-family: 'helvetica';
+		font-size: 2.25em;
+		font-weight: 100;
+		color: var(--white);
+	}
+
+	/* ----------- locks ---------- */
+
+	@media (min-width: 600px) {
+
+		.title-line-1 {
+			margin-top: -15.5%;
+			margin-bottom: .25rem;
+			margin-left: 7.5%;	
+			font-size: 28px;
+		}
+		
+		.title-line-2 {
+			margin-left: -15px;
+			font-size: 306px;
+			letter-spacing: -75px;
+		}
+
+		h2 {
+			font-size: 28.5px;
+			margin-left: 28%;
+		}
+
+		
+		ul {
+			margin-left: 16%;
+		}
+
+		li {
+			font-size: 12px;
+		}
+	}
+
+</code>
+</pre>
+<!--====================== END CSS ====================================-->
+
+
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>

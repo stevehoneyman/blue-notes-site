@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: Blue Train</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>Blue Train</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+	&lt;div class="wrapper">
+		&lt;div class="container">
+			&lt;h1>john coltrane&lt;/h1>
+			&lt;h2>blue train&lt;/h2>
+			&lt;h3>blue note 91271&lt;/h3>
+		&lt;/div><!-- closes container div -->
+	&lt;/div><!-- closes wrapper div -->
+&lt;
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+/* ------------- fonts -------------- */
+
+@font-face {
+	font-family: 'aurora_condensedregular';
+	src: url('../fonts/aurora_condensed_regular-webfont.woff2') format('woff2'),
+			url('../fonts/aurora_condensed_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'clarendon';
+	src: url("../fonts/clarendon-web/ClarendonLTStd.woff2") format("woff2"),
+		 url("../../fonts/clarendon-web/ClarendonLTStd.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+		font-family: 'league gothic';
+		src: url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"),
+			 url("../../fonts/leaguegothic-regular-webfont.woff") format("woff");
+		font-weight: normal;
+		font-style: normal;
+}
+
+/* -------------- reset --------------- */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 1vw;
+}
+
+/* ---------- universal styles ------------ */
+
+body {
+	font-family: 'clarendon';
+	color: #fff;
+	background-color: #ccc;
+}
+
+.wrapper {
+	width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		border: 5px solid #fff;
+	}
+
+.container{
+/*	display: flex;	*/
+	height: 0;
+	padding-top: 1%;
+		padding-bottom: 99%;
+		background: url('blue-train-base.jpg');
+		background-size: cover;
+}
+
+h1 {
+	margin-right: 1.25%;
+	font-size: 8.685em;
+	color: #a3e720;
+	text-align: right;
+}
+
+h2 {
+	margin-left: 1%;
+	text-transform: uppercase;
+	font-size: 4.35em;
+	color: #fbfbfb;
+	float: left;
+	line-height: 0.65;
+}
+
+h3 {
+	margin-right: 1.25%;
+	font-size: 4.35em;
+	float: right;
+	line-height: 0.65;
+
+}
+
+/* ------------ media queries and locks --------- */
+
+@media (min-width: 600px) {
+
+	h1 {
+		font-size: 52px;
+	}
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
+
+}
+</code>
+</pre>
+<!--====================== END CSS ====================================-->	
+
+				
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>

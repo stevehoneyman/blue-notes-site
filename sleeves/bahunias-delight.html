@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: Bahunias Delight</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>Bahunias Delight</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+&lt;div class="wrapper"&gt;
+	&lt;img src="images/worn-sleeve.jpg"&gt;	
+	&lt;h1 aria-label="art blakey and the jazz messengers"&gt;
+		&lt;span class="line-1" aria-hidden="true"&gt;Art&lt;/span&gt; 
+		&lt;span class="line-2" aria-hidden="true"&gt;Blakey&lt;/span&gt; 
+		&lt;span class="line-3" aria-hidden="true"&gt;&&lt;/span&gt; 
+		&lt;span class="line-4" aria-hidden="true"&gt;the&lt;/span&gt; 
+		&lt;span class="line-5" aria-hidden="true"&gt;Jazz&lt;/span&gt; 
+		&lt;span class="line-6" aria-hidden="true"&gt;Messengers&lt;/span&gt;
+	&lt;/h1&gt;
+	&lt;h2&gt;Buhania's Delight&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Freddie Hubbard&lt;/li&gt;
+		&lt;li&gt;Wayne Shorter / Curtis Fuller&lt;/li&gt;
+		&lt;li&gt;Cedar Walton&lt;/li&gt;
+		&lt;li&gt;Jymie Merrit&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;footer class="logo"&gt;
+  		&lt;span class="rectangle"&gt;&lt;/span&gt;
+  		&lt;span class="elipse"&gt;&lt;/span&gt;
+  		&lt;span class="label"&gt;Blue Note&lt;/span&gt;
+		&lt;/footer&gt;
+	&lt;/div&gt;
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+/* fonts 
+--------------------------------------------------------------------- */
+@font-face {
+	font-family: 'bindlestiff';
+	src: 	url('fonts/BindlestiffNF.woff2') format('woff2'),
+			url('fonts/BindlestiffNF.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+	}
+
+/* reset
+--------------------------------------------------------------------- */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* basics
+--------------------------------------------------------------------- */
+:root {
+	--white: #fff;
+    --red: #e22827;
+    --orange: #f36829;
+	--yellow: #e1cb33;
+    --green: #d2d3c4;
+	--blue: #579acd;
+	--black: #000;
+}
+
+html {
+	font-size: 1vw;
+}
+
+body {
+	padding-top: 5rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* layout
+--------------------------------------------------------------------- */
+.wrapper {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+}
+
+img {
+	grid-column: 1 / 9;
+	grid-row: 1 / 9;
+}
+
+
+header {
+	grid-column: 6 / -1;
+	grid-row: 3 / 5;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+
+/* type
+--------------------------------------------------------------------- */
+h1 {
+	height: 85%;
+	
+	font-family: bindlestiff;
+	font-size: 10.77rem;
+	font-weight: normal;
+	font-style: normal;
+	line-height: .85;
+	text-transform: lowercase;
+	
+	grid-column: 6 / -1;
+	grid-row: 3 / 8;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+
+h2 {
+	font-size: 2.71rem;
+	font-family: times;
+	color: var(--white);
+
+	grid-column: 7 / 9;
+	grid-row: 3 / 4;
+	margin-left: -14px;
+}
+
+ul {
+	font-family: times;
+	font-size: 2.69rem;
+	color: var(--green);
+
+	grid-column: 6 / 9;
+	grid-row: 6 / 6;
+	padding-left: 30px;
+	margin-top: -23px;
+}
+
+span {
+	display: block;
+}
+
+.line-1,
+.line-2 {
+	color: var(--red);
+}
+
+.line-3,
+.line-4 {
+	color: var(--orange);
+}
+
+.line-5,
+.line-6 {
+	color: var(--yellow);
+}
+
+.line-1 {
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+	text-align: right;
+	letter-spacing: 0.015rem;
+}
+
+.line-2 {
+	grid-column: 2 / 2;
+	grid-row: 1 / 1;
+	padding-top: 28px;
+	letter-spacing: 0.025rem;
+}
+
+.line-3 {
+	grid-column: 1 / 1;
+	grid-row: 2 / 2;
+	text-align: right;
+	margin-top: -25px;
+	margin-right: 1px;
+}
+
+.line-4 {
+	grid-column: 2 / 2;
+	grid-row: 2 / 2;
+	margin-top: 4px;
+	letter-spacing: 0.05rem;
+}
+
+.line-5 {
+	grid-column: 1 / 1;
+	grid-row: 3 / 3;
+/*	margin-top: -57px; */
+	margin-top: -10rem;
+	text-align: right;
+	letter-spacing: 0.025rem;
+}
+
+.line-6 {
+	grid-column: 1 / -1;
+	grid-row: 4 / 4;
+	padding-left: 11px;
+/*	margin-top: -91px; */
+	margin-top: -15rem;
+	letter-spacing: .1rem;
+}
+
+/* ------------- logo ----------------- */
+
+footer {
+    position: absolute;
+    top: 36.25%;
+    left: 45.75%;
+    width: 18%;
+    height: 5%;
+   	color: var(--white);
+}
+
+.rectangle {
+    position: relative;
+    display: block;
+    width: 63.6363%;
+    height: 47.3684%; /* 18px / 38px */
+/*  border: 1px solid var(--blue);*/
+    float: right;
+    background: var(--blue)
+}
+
+.rectangle:after {
+    content: 'Stereo';
+    position: absolute;
+    bottom: 0;
+    font-family: league gothic;
+    font-size: 2.65rem;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    color: var(--black);
+    padding-left: 2%;
+}
+	
+.elipse {
+    display: block;
+    width: 33%;
+    height: 52%; /* 20px / 38px */
+    margin-top: 17%; 
+    margin-right: -11px;
+    margin-left: 6.5%;
+    border-radius: 27px / 14px;
+    margin-bottom: 8px;
+    float: left;
+    background: var(--blue)
+}
+
+.elipse:after {
+    content: '';
+    padding: 2%;
+}
+
+.label {
+    padding-top: 1%;
+    padding-left: 10%;
+    font-family: 'league gothic';
+    text-transform: uppercase;
+    font-size: 2.45rem;
+    font-weight: 400;
+    color: var(--blue);
+    float: left;
+}
+			
+/* media queries
+--------------------------------------------------------------------- */
+
+@media (min-width: 600px) {
+	.wrapper {
+		width: 600px;
+		height: 600px;
+	}
+
+	.line-1 {
+		font-size: 64.93px;
+	}
+
+	.line-2 {
+		font-size: 64.93px;
+	}
+
+	.line-3 {
+		font-size: 64.93px;
+	}
+
+	.line-4 {
+		font-size: 64.93px;
+	}
+
+	.line-5 {
+		margin-top: -57px;
+		font-size: 64.93px;
+	}
+
+	.line-6 {
+		margin-top: -89px;
+		font-size: 64.93px;
+	}
+
+	h2 {
+		font-size: 16.23px;
+	}
+
+	li {
+		font-size: 14.61px;
+	}
+
+	.rectangle {
+		width: 68.71px;
+	}
+
+	.rectangle:after {
+		font-size: 18px;
+	}
+
+	.elipse {
+		font-size: 35.63px;
+	} 
+
+	.label {
+		font-size: 16px;
+	}
+}
+</code>
+</pre>
+<!--====================== END CSS ====================================-->	
+
+
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>

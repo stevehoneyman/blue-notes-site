@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: The Sidewinder</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>The Sidewinder</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+	&lt;div class="wrapper"&gt;
+		&lt;div class="container"&gt;
+
+			&lt;header&gt;
+				&lt;img src="images/sidewinder-main-image.jpg"&gt;
+			&lt;/header&gt;
+
+			&lt;section class="type"&gt;
+				&lt;h1>The Sidewinder&lt;/h1&gt;
+				&lt;h2&gt;&lt;span&gt;Lee&lt;/span&gt; Morgan&lt;/h2&gt;
+				&lt;h3&gt;Joe Henderson&lt;/h3&gt;
+				&lt;h3&gt;Barry Harris&lt;/h3&gt;
+				&lt;h3&gt;Bob Crenshaw&lt;/h3&gt;
+				&lt;h3&gt;Billy Higgins&lt;/h3&gt;
+			&lt;/section&gt;
+
+		&lt;/div&gt;<!-- container closes -->
+	&lt;/div&gt;<!-- wrapper closes -->
+		
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+	/* ------------- fonts -------------- */
+
+	@font-face {
+	  font-family: 'League Gothic';
+	  src: 	url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"), 
+	  	 	url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'Trade Gothic';
+	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	/* ------------ reset -------- */
+	
+	* {
+	  	padding: 0;
+	  	margin: 0;
+	  	box-sizing: border-box;
+	}
+
+	body {
+	  	background-color: #ccc;
+	}
+
+	img {
+	 	 max-width: 100%;
+	 	 margin-bottom: 1.3559%; 
+	}
+
+	/* ------------ layout --------- */
+
+	.wrapper {
+		width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		border: 5px solid #fff; 
+		background-color: #fff;
+	}
+
+	.container {
+		position: relative;
+		height: 0;
+		padding-bottom: 100%;
+		background-image: url('images/white-sleeve.gif');
+		background-size: cover; 
+	}
+
+	section { 
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between; 
+		
+	}	
+
+	/* ------ typography ------*/
+
+	h1, h2, h3 {
+		margin-bottom: 0.6779%;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		margin-left: 1.25%;
+			order: 1;
+		font-family: 'League Gothic';
+		font-size: 37px;
+		font-weight: 400;
+		line-height: 0.75;
+	  	color: #1f1e1e;
+	}
+
+	h2 {
+		order: 3;
+	  	font-family: 'Trade Gothic';
+	  	font-size: 27.9px;
+	  	font-weight: 200;
+	 	line-height: 1;
+	  	color: #ea5233;
+	}
+
+	span {
+		margin-right: 0; 
+	}
+
+	h3 {
+		order: 2;
+		font-family: 'Trade Gothic';
+		font-size: 5px;
+	 	line-height: 1;
+	  	color: #262425;
+	}
+
+	h3:first-of-type {
+		margin-left: 1.5%;
+	}
+
+	h3:last-of-type {
+		margin-right: 1.5%;
+	}
+
+/* ========== MEDIA QUERIES ============= */
+
+
+	@media (min-width: 180px) {
+		
+		h1	{
+			font-size: calc(0.2142 * 100vw + -0.093em); 
+			/* -1.5px / -0.093em calculated; 37px - 0.2142 * 180 = -1.556 */
+		}
+
+		h2 {
+			font-size: calc(0.1642 * 100vw + -1.5px)
+		}
+
+		h3 {
+			font-size: calc(0.0309 * 100vw + -0.5px);
+		}
+	}
+
+	
+	@media (min-width: 600px) {
+		  
+		h1 {
+		   font-size: 127px; 
+		} 
+
+		h2 {
+		    font-size: 97px; 
+		}
+
+		h3 {
+		    font-size: 18px;
+		}
+	}
+
+</code>
+</pre>
+<!--====================== END CSS ====================================-->
+
+				
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+	<head lang="en">
+
+		<title>Blue Notes: Blackjack</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/app.css" rel="stylesheet">
+		<link href="../css/prism.css" rel="stylesheet">
+
+
+	</head>
+
+	<body>
+		<div id="site-wrapper">
+			<main>
+				<h1>Blackjack</h1>
+				<h2>Talkin' Points</h2>
+				<h2>Type info</h2>
+
+				<h2>Code</h2>
+
+<!--====================== START HTML ====================================-->
+<pre>
+<code class="language-html">
+&lt;div class="wrapper"&gt;
+	&lt;div class="container"&gt;
+		&lt;div class="holder group"&gt;
+			&lt;img src="donald-byrd.jpg"&gt;
+		&lt;/div&gt;
+		&lt;h1&gt;&lt;span class="blue">Blackjack&lt;/span&gt; Donald Byrd&lt;/h1&gt;
+		&lt;h2>Sonny Red / Hank Mobley / Cedar Walton / Walter Booker / Billy Higgins&lt;/h2&gt;
+		&lt;footer class="logo"&gt;
+			&lt;span class="rectangle">&lt;/span&gt;
+			&lt;span class="elipse">&lt;/span&gt;
+			&lt;span class="label">Blue Note&lt;/span&gt;
+		&lt;/footer&gt;
+	&lt;/div&gt;<!-- closes container div -->	
+&lt;/div&gt;<!-- closes wrapper div -->
+</code>
+</pre>
+<!--====================== END HTML ====================================-->	
+
+<!--====================== START CSS ====================================-->	
+<pre>
+<code class="language-css">
+/* ------------- fonts -------------- */
+
+@font-face {
+	font-family: 'aurora_condensedregular';
+	src: url('../fonts/aurora_condensed_regular-webfont.woff2') format('woff2'),
+			url('../fonts/aurora_condensed_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trade Gothic';
+    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
+        url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+	
+/* --------- reset & globals ------- */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ccc;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	max-width: 100%
+}
+
+.group:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* ------------ layout ----------- */
+
+.wrapper {
+	width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		border: 5px solid #fff;
+	}
+
+.container{
+	position: relative;
+	height: 0;
+		padding-bottom: 100%;
+		background-color: #0173d4;
+	}
+
+	.holder {
+		margin-left: 15%;
+	}
+
+	img {
+		margin-top: 13%;
+		margin-bottom: 2%;
+		float: right;
+	}
+
+	/* ----------- typography --------- */
+
+	h1 {
+		width: 93%;
+		padding-top: 0.55%;
+	padding-left: 3.5%;
+		padding-bottom: 1%;
+		font-family: 'aurora_condensedregular';
+		font-size: calc(0.18 * 100vw);
+		font-weight: normal;
+		font-style: normal;
+		color: #fff;
+		text-transform: lowercase;
+		line-height: 0.7;
+		background-color: #2d1f76;
+	}
+
+	.blue {
+		color: #0173d4;
+}
+
+h2 {
+		margin-top: 12.5%;
+		margin-left: 8.3333%;
+		font-size: calc(0.025 * 100vw) ; /* 16px */
+		color: #09224e;
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	/* ------ logo ------*/
+
+footer {
+	position: absolute;
+	top: 51%;
+	right: 7%;
+	width: 19%;
+	height: 6.3333%;
+	color: #09224e;
+}
+
+.rectangle {
+	position: relative;
+	display: block;
+	width: 63.6363%;
+	height: 47.3684%; /* 18px / 38px */
+	border: 1px solid #09224e;
+	float: right;
+}
+
+.rectangle:after {
+	content: 'The Finest in Jazz';
+	position: absolute;
+	bottom: 0;
+	font-size: 2px;
+	padding-left: 2%;
+}
+
+.elipse {
+	display: block;
+	width: 36.3636%;
+	height: 52.6315%; /* 20px / 38px */
+	margin-top: 15%; 
+	margin-right: 0.01%;
+	border-radius: 20px / 10px;
+	border: 1px solid #09224e;
+	margin-bottom: 8px;
+	float: left;
+}
+
+.elipse:after {
+	content: '';
+	padding: 2%;
+}
+
+.label {
+	padding-top: 3%;
+	padding-left: 1%;
+	font-family: 'Trade Gothic';
+	text-transform: uppercase;
+	font-size: 2px;
+	font-weight: 800;
+	color: #09224e;
+	float: left;
+}
+
+/* ------------ media queries and locks --------- */
+
+
+@media (min-width: 180px) {
+
+	.label {
+		font-size: calc(0.0238 * 100vw + -2.28px);
+	}
+
+	.rectangle:after {
+		font-size: calc(0.0166 * 100vw + -0.988px);
+	}
+}
+
+@media (min-width: 600px) {
+
+	h1 {
+		font-size: 110px;
+	}
+
+	h2 {
+		font-size: 17px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.rectangle:after {
+		font-size: 9px;
+	}
+
+} /* ----------- end mq's -------- */
+
+</code>
+</pre>
+<!--====================== END CSS ====================================-->	
+
+
+
+			</main>
+		</div><!-- close site-wrapper -->
+		<script src="../js/prism.js"></script>
+	</body>
+</html>
