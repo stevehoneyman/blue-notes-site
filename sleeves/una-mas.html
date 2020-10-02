@@ -21,16 +21,16 @@
 				<h2>Code</h2>
 
 
-<!--====================== START HTML ====================================-->
+
 <pre>
 <code class="language-html">
 	&lt;div class="wrapper"&gt;
 		&lt;div class="container"&gt;
 			&lt;img src="images/una-mas.jpg"&gt;
-			&lt;h1>&lt;span class="una"&gt;U&lt;/span&gt;na&lt;br /&gt; 
+			&lt;h1>&lt;span class="una"&gt;U&lt;/span&gt;na&lt;br /&gt;
 				&lt;span class="mas"&gt;Mas&lt;/span&gt;&lt;br /&gt;
 			&lt;/h1>
-	
+
 			&lt;p class="band"&gt;&lt;span class="white">Kenny Dorham&lt;/span>/Joe Henderson&lt;br /&gt;
 			Herbie Hancock/Butch Warren/Anthony Williams&lt;/p&gt;
 
@@ -44,17 +44,16 @@
 	&lt;/div&gt;<!-- closes wrapper div -->
 </code>
 </pre>
-<!--====================== END HTML ====================================-->	
 
-<!--====================== START CSS ====================================-->	
 <pre>
 <code class="language-css">
-	/* ------------- fonts -------------- */
+	/* fonts
+	--------------------------------------------------------------------- */
 
 	@font-face {
 	    font-family: 'Trade Gothic';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
@@ -62,12 +61,14 @@
 	@font-face {
 	    font-family: 'Trade Gothic Bold';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-bold.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd-bold.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-bold.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
-		
-	/* -------------- reset --------------- */
+
+
+	/* reset
+	--------------------------------------------------------------------- */
 
 	* {
 		padding: 0;
@@ -83,16 +84,17 @@
 		max-width: 100%
 	}
 
-	/* ---------- layout ------------ */
 
-	
+	/* layout
+	--------------------------------------------------------------------- */
+
 	.wrapper {
 		width: 100%;
   		max-width: 600px;
   		margin: 1rem auto;
   		border: 5px solid #fff;
   	}
-	
+
 	.container{
 		position: relative;
 		height: 0;
@@ -100,7 +102,9 @@
   		background-color: #000;
   	}
 
-  	/* ----------- type --------------- */
+
+  	/* type
+  	--------------------------------------------------------------------- */
 
   	h1 {
   		position: absolute;
@@ -111,9 +115,7 @@
   		letter-spacing: -0.065em;
   		line-height: 0.75;
   		color: #bd2659;
-  		
-  	}
-
+	}
 
 	img {
 		padding-top: 17%;
@@ -129,7 +131,6 @@
 		text-align: right;
 		letter-spacing: 0.025em;
 		text-transform: uppercase;
-		
 		color: #e1a041;
 	}
 
@@ -137,7 +138,8 @@
 		color: #fff;
 	}
 
-	/* ------------ footer and logo -------- */
+	/* footer
+	--------------------------------------------------------------------- */
 
 	footer {
 		position: absolute;
@@ -153,8 +155,7 @@
 		position: relative;
 		display: block;
 		width: 63.6363%;
-		height: 47.3684%; /* 18px / 38px */
-	/*	border: 1px solid #e1a041; */
+		height: 47.3684%;
 		background-color: #e1a041;
 		float: right;
 
@@ -172,11 +173,10 @@
 	.elipse {
 		display: block;
 		width: 36.3636%;
-		height: 52.6315%; /* 20px / 38px */
-		margin-top: 15%; 
+		height: 52.6315%;
+		margin-top: 15%;
 		margin-right: 0.01%;
 		border-radius: 20px / 10px;
-	/*	border: 1px solid #e1a041; */
 		margin-bottom: 8px;
 		background-color: #e1a041;
 		float: left;
@@ -193,15 +193,14 @@
 		font-family: 'Trade Gothic';
 		text-transform: uppercase;
 		font-size: 2px;
-	/*	letter-spacing: 0.3vw; */
 		font-weight: 400;
 		color: #e1a041;
 		float: left;
 	}
 
-	
 
-	/* ------------ media queries and locks --------- */
+	/* media queries
+	--------------------------------------------------------------------- */
 
 	@media (min-width: 180px) {
 
@@ -216,15 +215,14 @@
 		.label {
 		font-size: calc(0.0238 * 100vw + -2.28px);
 		}
-	
+
 		.rectangle:after {
 		font-size: calc(0.0166 * 100vw + -0.988px);
 		}
 	}
 
-
 	@media (min-width: 600px) {
-		
+
 		h1 {
 			font-size: 64px;
 		}
@@ -249,13 +247,12 @@
 		.rectangle:after {
 			font-size: 9px;
 		}
-
 	}
 </code>
 </pre>
-<!--====================== END CSS ====================================-->
 
-				
+
+
 			</main>
 		</div><!-- close site-wrapper -->
 		<script src="../js/prism.js"></script>

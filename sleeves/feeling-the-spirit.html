@@ -20,9 +20,6 @@
 
 				<h2>Code</h2>
 
-
-				
-<!--====================== START HTML ====================================-->
 <pre>
 <code class="language-html">
 	&lt;div class="wrapper"&gt;
@@ -32,35 +29,33 @@
 				&lt;span class="spirit">The Spirit&lt;/span&gt;
 			&lt;/h1>
 			&lt;h2>Grant Green&lt;/h2&gt;
-	
+
 			&lt;ul class="band">
 				&lt;li>Herbie Hancock&lt;/li&gt;
 				&lt;li>Butch Warren&lt;/li&gt;
 				&lt;li>Billy Higgins&lt;/li&gt;
 				&lt;li>Garvin Masseaux&lt;/li&gt;
 			&lt;/ul&gt;
-	
+
 			&lt;footer class="logo"&gt;
 				&lt;span class="rectangle">&lt;/span&gt;
 				&lt;span class="elipse">&lt;/span&gt;
 				&lt;span class="label">Blue Note&lt;/span&gt;
-			&lt;/footer>		
+			&lt;/footer>
 		&lt;/div><!-- closes container div -->
 	&lt;/div><!-- closes wrapper div -->
 </code>
 </pre>
-<!--====================== END HTML ====================================-->	
 
-<!--====================== START CSS ====================================-->	
 <pre>
 <code class="language-css">
-	/* ------------- fonts -------------- */
 
+	/* ------------- fonts -------------- */
 
 	@font-face {
 		font-family: 'Trade Gothic Bold';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-Bd2.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd-Bd2.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-Bd2.woff') format('woff');
 	    font-weight: bold;
 	    font-style: normal;
 	}
@@ -68,21 +63,21 @@
 	@font-face {
 		font-family: 'Trade Gothic';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
-		
+
 
 	@font-face {
 		font-family: 'Trade Gothic Light';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-Light.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd-Light.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-Light.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
-	}	
+	}
 
-		
+
 	/* ----------- reset & basics --------- */
 
 	* {
@@ -108,7 +103,7 @@
   		margin: 1rem auto 0;
   		background-color: #0e1318;
   	}
-	
+
 	.container{
 		position: relative;
 		height: 0;
@@ -134,11 +129,14 @@
 
   	/* ------------ typography ---------------------- */
 
-  	h1, h2, li {
+  	h1,
+	h2,
+	li {
   		font-size: 6px;
   	}
 
-	h1, h2 {
+	h1,
+	h2 {
   		font-family: 'Trade Gothic Bold';
   		line-height: 1;
 		text-transform: uppercase;
@@ -178,11 +176,11 @@
   	li:nth-of-type(2) {
   		margin-left: 11.75%;
 	}
-  	
+
   	li:nth-of-type(3) {
   		margin-left: 15%;
   	}
-  	
+
   	li:nth-of-type(4) {
   		margin-left: 6.75%;
   	}
@@ -190,8 +188,8 @@
   	/* ------------------ filters ------------- */
 
   	.filter {
-			-webkit-filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
-			filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
+		-webkit-filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
+		filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
 		opacity: 0.95;
 	}
 
@@ -211,7 +209,6 @@
 		display: block;
 		width: 63.6363%;
 		height: 47.3684%; /* 18px / 38px */
-	/*	border: 1px solid #83acd6; */
 		background-color: #83acd6;
 		float: right;
 	}
@@ -229,8 +226,8 @@
 	.elipse {
 		display: block;
 		width: 36.3636%;
-		height: 52.6315%; /* 20px / 38px */
-		margin-top: 15%; 
+		height: 52.6315%;
+		margin-top: 15%;
 		margin-right: 0.01%;
 		border-radius: 20px / 10px;
 		background-color: #83acd6;
@@ -258,15 +255,17 @@
 	/* ------------ media queries and locks --------- */
 
 	@media (min-width: 180px) {
-		
-		h1, h2, li {
+
+		h1,
+		h2,
+		li {
 			font-size: calc( 0.038 * 100vw + -0.84px);
 		}
 
 		.label {
 			font-size: calc(0.0238 * 100vw + -2.28px);
 		}
-		
+
 		.rectangle:after {
 			font-size: calc(0.0166 * 100vw + -0.988px);
 		}
@@ -275,7 +274,9 @@
 
 	@media (min-width: 600px) {
 
-		h1, h2, li {
+		h1,
+		h2,
+		li {
 			font-size: 22px;
 		}
 
@@ -290,9 +291,9 @@
 
 </code>
 </pre>
-<!--====================== END CSS ====================================-->	
+<!--====================== END CSS ====================================-->
 
-				
+
 			</main>
 		</div><!-- close site-wrapper -->
 		<script src="../js/prism.js"></script>

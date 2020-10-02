@@ -21,7 +21,7 @@
 				<h2>Code</h2>
 
 
-<!--====================== START HTML ====================================-->
+
 <pre>
 <code class="language-html">
 	&lt;div class="wrapper"&gt;
@@ -30,7 +30,7 @@
 				&lt;h1 class="cooker"&gt;The cooker&lt;/h1&gt;
 				&lt;h2 class="morgan"Lee&lt;br />Morgan&lt;/h2&gt;
 			&lt;/header&gt;
-			
+
 			&lt;footer class="logo"&gt;
 				&lt;span class="rectangle">&lt;/span&gt;
 				&lt;span class="elipse">&lt;/span&gt;
@@ -40,12 +40,12 @@
 	&lt;/div&gt;<!-- closes wrapper div -->
 </code>
 </pre>
-<!--====================== END HTML ====================================-->	
 
-<!--====================== START CSS ====================================-->	
 <pre>
 <code class="language-css">
-	/* ------------- fonts -------------- */
+
+	/* fonts
+	--------------------------------------------------------------------- */
 
 	@font-face {
 		font-family: 'bulletin';
@@ -58,12 +58,14 @@
 	@font-face {
 	    font-family: 'Trade Gothic';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
-		
-	/* -------------- reset --------------- */
+
+
+	/* reset
+	--------------------------------------------------------------------- */
 
 	* {
 		padding: 0;
@@ -92,7 +94,7 @@
   		border: 5px solid #fff;
   		background-color: #1e0103;
 	}
-	
+
 	.container{
 		position: relative;
 		height: 0;
@@ -107,7 +109,8 @@
 		padding-left: 2.5%;
 	}
 
-	h1, h2 {
+	h1,
+	h2 {
 		font-family: 'bulletin', sans-serif;
 		color: #fff;
 		text-transform: uppercase;
@@ -144,8 +147,7 @@
 		position: relative;
 		display: block;
 		width: 63.6363%;
-		height: 47.3684%; /* 18px / 38px */
-	/*	border: 1px solid #ad3a2d; */
+		height: 47.3684%;
 		background-color: #c0392a;
 		float: right;
 	}
@@ -162,11 +164,10 @@
 	.elipse {
 		display: block;
 		width: 36.3636%;
-		height: 52.6315%; /* 20px / 38px */
-		margin-top: 15%; 
+		height: 52.6315%;
+		margin-top: 15%;
 		margin-right: 0.01%;
 		border-radius: 20px / 10px;
-	/*	border: 1px solid #ad3a2d; */
 		background-color: #c0392a;
 		margin-bottom: 8px;
 		float: left;
@@ -189,16 +190,16 @@
 		float: left;
 	}
 
-	
+
 	/* ------------ media queries and locks --------- */
 
 
 	@media (min-width: 180px) {
-	
+
 		.label {
 			font-size: calc(0.0238 * 100vw + -2.28px);
 		}
-		
+
 		.rectangle:after {
 			font-size: calc(0.0166 * 100vw + -0.988px);
 		}
@@ -206,7 +207,7 @@
 
 
 	@media (min-width: 600px) {
-		
+
 		.cooker {
 			font-size: 28px;
 			letter-spacing: 3px;
@@ -224,14 +225,13 @@
 		.rectangle:after {
 			font-size: 9px;
 		}
-		
-	}
+	``}
 
 </code>
 </pre>
 <!--====================== END CSS ====================================-->
 
-				
+
 			</main>
 		</div><!-- close site-wrapper -->
 		<script src="../js/prism.js"></script>

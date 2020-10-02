@@ -20,8 +20,6 @@
 
 				<h2>Code</h2>
 
-
-<!--====================== START HTML ====================================-->
 <pre>
 <code class="language-html">
 	&lt;div class="wrapper filter"&gt;
@@ -43,31 +41,32 @@
 	&lt;/div&gt;<!-- wrapper closing div -->
 </code>
 </pre>
-<!--====================== END HTML ====================================-->	
 
-<!--====================== START CSS ====================================-->	
 <pre>
 <code class="language-css">
-	/* ------------------- fonts -------------------- */
+
+	/* fonts
+	--------------------------------------------------------------------- */
 
 	@font-face {
 		font-family: 'up';
 		src: url('fonts/up/UPRegular.woff2') format('woff2'),
-    	url('fonts/up/UPRegular.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-	}	
-
-
-	@font-face {
-		font-family: 'Trade Gothic';
-	    src: url('fonts/trade-gothic/TradeGothicLTStd-Extended.woff2') format('woff2');
+    		 url('fonts/up/UPRegular.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 	}
 
-	/* ------------------ reset --------------------- */
-	
+	@font-face {
+		font-family: 'Trade Gothic';
+	    src:  url('fonts/trade-gothic/TradeGothicLTStd-Extended.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+	/* reset
+	--------------------------------------------------------------------- */
+
 	* {
 		padding: 0;
 		margin: 0;
@@ -88,7 +87,7 @@
 
 	body {
 		-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
+		-moz-osx-font-smoothing: grayscale;
 		background: var(--light-grey);
 	}
 
@@ -96,7 +95,9 @@
 		max-width: 100%;
 	}
 
-	/* ------------------- layout --------------------- */	
+
+	/* layout
+	--------------------------------------------------------------------- */
 
 	.wrapper {
 		width: 100%;
@@ -107,37 +108,22 @@
 	.sleeve {
 		position: relative;
 		height: 0;
-		padding-bottom: 100%; 
+		padding-bottom: 100%;
  		background-image: url('images/worn-sleeve.jpg');
   		background-repeat: no-repeat;
   		background-size: cover;
 	}
 
-	/*  	
-		.sleeve:after {
-	  		position: absolute;
-	  		content: '';
-	  		top: 0;
-	  		width: 100%;
-			height: 100%;
-	  		background-image: url('images/worn-sleeve.jpg');
-	  		background-repeat: no-repeat;
-	  		background-size: cover;
-	  		mix-blend-mode: lighten;
-	  		opacity: 0.65;
-	  		z-index: 10;
-	  	}
-	*/
-		.filter {
-  			-webkit-filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
-  			filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
-			opacity: 0.95;
-		}
-	
+	.filter {
+		-webkit-filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
+		filter: sepia(0.35) contrast(0.9) brightness(1.1) hue-rotate(-10deg) saturate(1.5);
+		opacity: 0.95;
+	}
 
 
-	/* ------------------- type --------------------- */		
-		
+	/* type
+	--------------------------------------------------------------------- */
+
 	h1 {
 		display: flex;
 		flex-direction: column;
@@ -147,7 +133,7 @@
 	.title-line-1 {
 		margin-top: -15.5%;
 		margin-bottom: .25rem;
-		margin-left: 9%;	
+		margin-left: 9%;
 		font-size: 2.25em;
 		font-family: 'trade gothic';
 		font-weight: 400;
@@ -188,17 +174,19 @@
 		color: var(--white);
 	}
 
-	/* ----------- locks ---------- */
+
+	/* media queries
+	--------------------------------------------------------------------- */
 
 	@media (min-width: 600px) {
 
 		.title-line-1 {
 			margin-top: -15.5%;
 			margin-bottom: .25rem;
-			margin-left: 7.5%;	
+			margin-left: 7.5%;
 			font-size: 28px;
 		}
-		
+
 		.title-line-2 {
 			margin-left: -15px;
 			font-size: 306px;
@@ -210,7 +198,7 @@
 			margin-left: 28%;
 		}
 
-		
+
 		ul {
 			margin-left: 16%;
 		}
@@ -222,7 +210,7 @@
 
 </code>
 </pre>
-<!--====================== END CSS ====================================-->
+
 
 
 			</main>

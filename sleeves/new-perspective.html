@@ -35,31 +35,31 @@
 			&lt;footer class="logo"&gt;
 				&lt;span class="rectangle"&gt;&lt;/span&gt;
 				&lt;span class="elipse"&gt;&lt;/span&gt;
-				&lt;span class="label"&gt;Blue Note&lt;/span&gt; 
+				&lt;span class="label"&gt;Blue Note&lt;/span&gt;
 			&lt;/footer&gt;
-		&lt;/div&gt;<!-- closes container div -->	
+		&lt;/div&gt;<!-- closes container div -->
 	&lt;/div&gt;<!-- closes wrapper div -->
 </code>
 </pre>
-<!--====================== END HTML ====================================-->	
+<!--====================== END HTML ====================================-->
 
-<!--====================== START CSS ====================================-->	
+<!--====================== START CSS ====================================-->
 <pre>
 <code class="language-css">
 	/* ------------- fonts -------------- */
 
 	@font-face {
-			font-family: 'league gothic';
-			src: url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"), 
-				 url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
+		font-family: 'league gothic';
+		src: url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"),
+			 url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
+		font-weight: normal;
+		font-style: normal;
 	}
 
 	@font-face {
 	    font-family: 'Trade Gothic';
 	    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
-	        url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+	         url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
@@ -67,11 +67,11 @@
 	@font-face {
 		font-family: 'aurora_condensedregular';
 		src: url('../fonts/aurora_condensed_regular-webfont.woff2') format('woff2'),
- 			url('../fonts/aurora_condensed_regular-webfont.woff') format('woff');
+ 			 url('../fonts/aurora_condensed_regular-webfont.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 	}
-		
+
 	/* -------------- reset --------------- */
 
 	* {
@@ -97,7 +97,7 @@
 	.group:after {
 		content: '';
 		display: table;
-			clear: both;
+		clear: both;
 	}
 
 	/* ---------- layout ------------ */
@@ -108,7 +108,7 @@
   		margin: 1rem auto;
   		border: 5px solid #fff;
   	}
-	
+
 	.container{
 		position: relative;
 		height: 0;
@@ -131,8 +131,8 @@
 		font-size: 8.8659em;
 		letter-spacing: -0.015em;
 
-  		font-weight: normal; 
-  		font-style: normal;  
+  		font-weight: normal;
+  		font-style: normal;
   		line-height: 0.75;
   		color: #000;
 
@@ -183,7 +183,7 @@
 		display: block;
 		width: 36.3636%;
 		height: 52.6315%; /* 20px / 38px */
-		margin-top: 15%; 
+		margin-top: 15%;
 		margin-right: 0.01%;
 		border-radius: 20px / 10px;
 		border: 1px solid #999;
@@ -211,21 +211,19 @@
 
   	/* ------------ media queries and locks --------- */
 
+	@media (min-width: 180px) {
 
-  	@media (min-width: 180px) {
-	
 		.label {
 			font-size: calc(0.0238 * 100vw + -2.28px);
 		}
-	
+
 		.rectangle:after {
 			font-size: calc(0.0166 * 100vw + -0.988px);
 		}
 	}
 
-
 	@media (min-width: 600px) {
-	
+
 		h1 {
 			font-size: 52px;
 			letter-spacing: -0.5px;
@@ -237,14 +235,15 @@
 
 		.rectangle:after {
 			font-size: 9px;
-		}				
+		}
+	}
 
-	} /* ----------- end mq's -------- */
+	/* ----------- end media queries and locks -------- */
 </code>
 </pre>
-<!--====================== END CSS ====================================-->	
+<!--====================== END CSS ====================================-->
 
-				
+
 			</main>
 		</div><!-- close site-wrapper -->
 		<script src="../js/prism.js"></script>

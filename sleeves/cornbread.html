@@ -21,7 +21,7 @@
 				<h2>Code</h2>
 
 
-<!--====================== START HTML ====================================-->
+
 <pre>
 <code class="language-html">
 	&lt;div class="container"&gt;
@@ -45,7 +45,7 @@
 				&lt;li&gt;Larry Ridley / &lt;/li&gt;
 				&lt;li&gt;Billy Higgins&lt;/li&gt;
 			&lt;/ul&gt;
-			&lt;/section&gt;
+		&lt;/section&gt;
 
 		&lt;footer class="logo group" aria-label="blue note logo"&gt;
 			&lt;span class="rectangle"&gt;&lt;/span&gt;
@@ -56,14 +56,15 @@
 	&lt;/div&gt;<!-- close container -->
 </code>
 </pre>
-<!--====================== END HTML ====================================-->	
 
-<!--====================== START CSS ====================================-->	
 <pre>
 <code class="language-css">
+	/* fonts
+	--------------------------------------------------------------------- */
+
 	@font-face {
-	font-family: 'Trade Gothic';
-	src: url('fonts/trade-gothic-web/TradeGothicLTStd.woff2') format('woff2');
+		font-family: 'Trade Gothic';
+		src: url('fonts/trade-gothic-web/TradeGothicLTStd.woff2') format('woff2');
 	}
 
 	@font-face {
@@ -71,7 +72,8 @@
 	    src: url('fonts/leaguegothic-regular-webfont.woff2') format('woff2');
 	}
 
-	/* ================== RESET ======================= */
+	/* reset
+	--------------------------------------------------------------------- */
 
 	* {
 		padding: 0;
@@ -98,12 +100,13 @@
 	}
 
 	.group:after {
-			content: " ";
-			display: table;
-			clear: both;
+		content: " ";
+		display: table;
+		clear: both;
 	}
 
-	/* ==================== LAYOUT ==================== */
+	/* layout
+	--------------------------------------------------------------------- */
 
 	.container {
 		display: grid;
@@ -134,7 +137,8 @@
 		z-index: 10;
 	}
 
-	/* ============ TYPOGRAPHY ================= */
+	/* typography
+	--------------------------------------------------------------------- */
 
 	h1 {
 		grid-column: 2 / 7;
@@ -160,7 +164,8 @@
 	}
 
 
-	/* ---------- cornbread lettering ------- */
+	/* cornbread lettering (ie titling)
+	--------------------------------------------------------------------- */
 
 	h1 .top {
 		grid-column: 1 / 5;
@@ -223,7 +228,8 @@
 	}
 
 
-	/* ------------ effects ----------- */
+	/* effects
+	--------------------------------------------------------------------- */
 
 	.sleeve {
 		grid-column: 1 / 8;
@@ -232,7 +238,8 @@
 		z-index: 5;
 	}
 
-	/* ------------- logo ------------------ */
+	/* logo
+	--------------------------------------------------------------------- */
 
 	footer {
 		grid-column: 6 / 7;
@@ -290,39 +297,40 @@
 		margin-top: -2.25em;
 	}
 
-	/* ------- media queries and locks ----- */
+	/* media queries and locks
+	--------------------------------------------------------------------- */
 
 	@media (min-width: 600px) {
 
-			.container {
-				grid-template-rows: 79px 80px 1px 250px 5px 80px 105px;
-			}
+		.container {
+			grid-template-rows: 79px 80px 1px 250px 5px 80px 105px;
+		}
 
-			.top,
-			.right,
-			.bottom,
-			.left {
-				font-size: 109.65px;
-				letter-spacing: -2.75px;
-			}
+		.top,
+		.right,
+		.bottom,
+		.left {
+			font-size: 109.65px;
+			letter-spacing: -2.75px;
+		}
 
-			section h2, li {
-				font-size: 17px;
-			}
+		section h2, li {
+			font-size: 17px;
+		}
 
-			.label {
-				font-size: 13px;
-			}
+		.label {
+			font-size: 13px;
+		}
 
-			.rectangle:after {
-				font-size: 9px;
-			}
+		.rectangle:after {
+			font-size: 9px;
+		}
 	}
 </code>
 </pre>
-<!--====================== END CSS ====================================-->	
 
-				
+
+
 			</main>
 		</div><!-- close site-wrapper -->
 		<script src="../js/prism.js"></script>
